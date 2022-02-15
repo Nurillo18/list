@@ -1,0 +1,135 @@
+* {
+    box-sizing: border-box;
+}
+body{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    background-image: url("../images/nurxon.png");
+    background-repeat: no-repeat;
+    background-position:calc(50%) calc(50% + 400px);
+    background-size: 750px;
+}
+.container{
+    max-width: 1280px;
+    margin: 0 auto;
+    padding:0 20px;
+}
+div{
+    position: absolute;
+    top: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.nurxon{
+    width: 100px;
+    animation: boubbles 7s linear infinite;
+}
+
+@keyframes boubbles{
+    0%{
+        transform: translateY(0);
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    75%{
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(-700px);
+        opacity: 0;
+    }
+
+}
+
+.nurxon:nth-child(1){
+    animation-delay: 2s;
+    width: 30px;
+}
+.nurxon:nth-child(2){
+    animation-delay: 1s;
+}
+.nurxon:nth-child(3){
+    animation-delay: 4s;
+}
+.nurxon:nth-child(4){
+    animation-delay: 6s;
+    width: 55px;
+}
+.nurxon:nth-child(5){
+    animation-delay: 5s;
+}
+.nurxon:nth-child(6){
+    animation-delay: 2s;
+}
+img:nth-child(7){
+    animation-delay:2s;
+    width: 65px;
+}.sec-im{
+    position: absolute;
+    border-radius: 70%;
+    width: 300px;
+    height: 400px;
+    z-index: -1;
+    animation: nurxon 8s linear infinite;
+    animation-iteration-count: 1000;
+    animation-direction: alternate;
+}
+
+@keyframes nurxon {
+    0%{
+        transform: rotate(900deg);
+    }
+    50%{
+        border-radius: 10px;
+    }
+
+    100%{
+        transform: rotate(720deg);
+
+        transform: translateX(600px);
+    }
+}
+
+span{
+    position: absolute;
+    display: block;
+    width: 80px;
+    height: 80px;
+    border: 2px dashed blue;
+    border-radius: 50%;
+    animation: cir 8s linear infinite;
+    right: 0;
+}
+
+@keyframes cir {
+    0%{
+        opacity: 0;
+    }
+
+    50%{
+        transform: scale(2);
+        opacity: 1;
+        box-shadow: -1px 1px 5px 5px blue;
+    }
+
+    100%{
+        transform: scale(2);
+        opacity: 0;
+        box-shadow: 3px 3px 8px 10px blue;
+    }
+}
+
+span:nth-child(1){
+    animation-delay:1s;
+}span:nth-child(2){
+    animation-delay: 3s;
+}span:nth-child(3){
+    animation-delay: 5s;
+}
